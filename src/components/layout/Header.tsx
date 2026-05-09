@@ -6,10 +6,10 @@ import { cn } from "@/lib/utils";
 
 const NAV = [
   { to: "/", label: "Home", exact: true },
-  { to: "/portfolio", label: "Portfolio" },
-  { to: "/services", label: "Services" },
-  { to: "/about", label: "About" },
-  { to: "/contact", label: "Contact" },
+  { to: "/portfolio", label: "Portfolio", exact: false },
+  { to: "/services", label: "Services", exact: false },
+  { to: "/about", label: "About", exact: false },
+  { to: "/contact", label: "Contact", exact: false },
 ] as const;
 
 export function Header() {
