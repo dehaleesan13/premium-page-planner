@@ -9,6 +9,9 @@ import {
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { FloatingWhatsApp } from "@/components/layout/FloatingWhatsApp";
 
 function NotFoundComponent() {
   return (
@@ -126,7 +129,12 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <Header />
+      <main className="pt-0">
+        <Outlet />
+      </main>
+      <Footer />
+      <FloatingWhatsApp />
     </QueryClientProvider>
   );
 }
